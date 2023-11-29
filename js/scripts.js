@@ -56,7 +56,7 @@ const login = async () => {
     username: String(document.querySelector("#username").value),
     password: String(document.querySelector("#password").value),
   };
-  const data = await fetch("http://127.0.0.1:8000/api/token/", {
+  const data = await fetch("http://kiran1432.pythonanywhere.com/api/token/", {
     method: "POST",
     body: JSON.stringify(addfile),
     headers: {
@@ -80,7 +80,7 @@ const login = async () => {
 };
 
 const fun = async () => {
-  const userdata = await fetch("http://127.0.0.1:8000/usertype", {
+  const userdata = await fetch("http://kiran1432.pythonanywhere.com/usertype", {
     method: "GET",
     headers: {
       "Content-type": "application/json",

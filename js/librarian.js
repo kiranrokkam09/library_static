@@ -6,7 +6,7 @@ if (localStorage.getItem("token") == "null") {
 //Delete Book
 const deletebook = async (id) => {
   try {
-    const response = await fetch(`http://127.0.0.1:8000/book_delete/${id}`, {
+    const response = await fetch(`http://kiran1432.pythonanywhere.com/book_delete/${id}`, {
       method: "DELETE",
       headers: {
         "Content-type": "application/json",
@@ -33,7 +33,7 @@ const deletebook = async (id) => {
 //librarian books
 
 const libbooks = async () => {
-  const userdata = await fetch("http://127.0.0.1:8000/book_view", {
+  const userdata = await fetch("http://kiran1432.pythonanywhere.com/book_view", {
     method: "GET",
     headers: {
       "Content-type": "application/json",
@@ -117,7 +117,7 @@ const add_book = async (book_name, book_description, book_author) => {
     description: book_description,
     author: book_author,
   };
-  const data = await fetch("http://127.0.0.1:8000/book_add", {
+  const data = await fetch("http://kiran1432.pythonanywhere.com/book_add", {
     method: "POST",
     body: JSON.stringify(addfile),
     headers: {
@@ -161,7 +161,7 @@ const update_book = async (
     description: update_book_description,
     author: update_book_author,
   };
-  const data = await fetch("http://127.0.0.1:8000/book_update/" + String(id), {
+  const data = await fetch("http://kiran1432.pythonanywhere.com/book_update/" + String(id), {
     method: "PUT",
     body: JSON.stringify(addfile),
     headers: {
@@ -193,7 +193,7 @@ const updatebook = (id) => {
 
 //librarain members
 const libmembers = async () => {
-  const userdata = await fetch("http://127.0.0.1:8000/member", {
+  const userdata = await fetch("http://kiran1432.pythonanywhere.com/member", {
     method: "GET",
     headers: {
       "Content-type": "application/json",
@@ -277,7 +277,7 @@ const add_member = async (name, password, email) => {
     password: password,
     email: email,
   };
-  const data = await fetch("http://127.0.0.1:8000/member", {
+  const data = await fetch("http://kiran1432.pythonanywhere.com/member", {
     method: "POST",
     body: JSON.stringify(addfile),
     headers: {
@@ -312,7 +312,7 @@ const update_member = async (id, name, password, email) => {
     password: password,
     email: email,
   };
-  const data = await fetch("http://127.0.0.1:8000/member/" + String(id), {
+  const data = await fetch("http://kiran1432.pythonanywhere.com/member/" + String(id), {
     method: "PUT",
     body: JSON.stringify(addfile),
     headers: {
@@ -340,7 +340,7 @@ const updatemember = (id) => {
 const deletemember = (id) => {
   const delete_fetch = async () => {
     try {
-      const response = await fetch(`http://127.0.0.1:8000/member/${id}`, {
+      const response = await fetch(`http://kiran1432.pythonanywhere.com/member/${id}`, {
         method: "DELETE",
         headers: {
           "Content-type": "application/json",

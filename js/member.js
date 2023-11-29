@@ -5,7 +5,7 @@ if (localStorage.getItem("token") == "null") {
 // Member Books Section
 
 const member_books = async () => {
-  const userdata = await fetch("http://127.0.0.1:8000/book_view", {
+  const userdata = await fetch("http://kiran1432.pythonanywhere.com/book_view", {
     method: "GET",
     headers: {
       "Content-type": "application/json",
@@ -69,7 +69,7 @@ member_books();
 // My Books
 
 const mybooks = async () => {
-  const userdata = await fetch("http://127.0.0.1:8000/mybooks", {
+  const userdata = await fetch("http://kiran1432.pythonanywhere.com/mybooks", {
     method: "GET",
     headers: {
       "Content-type": "application/json",
@@ -104,7 +104,7 @@ const borrow = async (id, name, description, author) => {
     author: author,
     status: "false",
   };
-  await fetch(`http://127.0.0.1:8000/book_update/${id}`, {
+  await fetch(`http://kiran1432.pythonanywhere.com/book_update/${id}`, {
     method: "PUT",
     body: JSON.stringify(addfile),
     headers: {
@@ -125,7 +125,7 @@ const returnfetch = async (id, name, description, author) => {
     author: author,
     status: "true",
   };
-  await fetch(`http://127.0.0.1:8000/book_update/${id}`, {
+  await fetch(`http://kiran1432.pythonanywhere.com/book_update/${id}`, {
     method: "PUT",
     body: JSON.stringify(addfile),
     headers: {
@@ -139,7 +139,7 @@ const returnfetch = async (id, name, description, author) => {
 
 //Delete Own Account
 const owndelete = async () => {
-  await fetch(`http://127.0.0.1:8000/memberowndelete`, {
+  await fetch(`http://kiran1432.pythonanywhere.com/memberowndelete`, {
     method: "DELETE",
     headers: {
       "Content-type": "application/json",
